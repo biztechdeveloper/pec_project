@@ -1,0 +1,92 @@
+Certainly! Here is the modified code with checkboxes added where necessary:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File Planters</title>
+<style>
+/* CSS styles */
+/* Add your CSS styles here */
+</style>
+</head>
+<body>
+<div id="screen1">
+    <h1>Welcome to File Planters</h1>
+    <button id="parentSignUpBtn">Sign Up as Parent</button>
+    <button id="schoolSignUpBtn">Sign Up as School</button>
+</div>
+
+<div id="parentSignUpForm" style="display: none;">
+    <h2>Parent Sign Up</h2>
+    <!-- Form for parent sign up -->
+    <input type="text" id="parentName" placeholder="Enter your name">
+    <input type="email" id="parentEmail" placeholder="Enter your email">
+    <button id="selectSchoolBtn">Select School</button>
+</div>
+
+<div id="schoolSignUpForm" style="display: none;">
+    <h2>School Sign Up</h2>
+    <!-- Form for school sign up -->
+    <input type="text" id="schoolName" placeholder="Enter school name">
+    <input type="text" id="schoolLocation" placeholder="Enter school location">
+    <button id="selectParametersBtn">Select Parameters</button>
+</div>
+
+<div id="schoolList" style="display: none;">
+    <h2>Schools in Mumbai Area</h2>
+    <!-- List of schools with checkboxes -->
+    <ul id="schoolListItems">
+        <li><input type="checkbox" id="school1" name="school1" value="School 1"><label for="school1"> School 1</label></li>
+        <li><input type="checkbox" id="school2" name="school2" value="School 2"><label for="school2"> School 2</label></li>
+        <li><input type="checkbox" id="school3" name="school3" value="School 3"><label for="school3"> School 3</label></li>
+        <!-- You can add more schools here -->
+    </ul>
+    <button id="checkoutBtn">Checkout</button>
+</div>
+
+<div id="applicationForm" style="display: none;">
+    <h2>Application Form</h2>
+    <!-- Parent's application form fields -->
+    <input type="text" id="childName" placeholder="Child's name">
+    <input type="text" id="childAge" placeholder="Child's age">
+    <!-- Add more fields as needed -->
+    <button id="submitApplicationBtn">Submit Application</button>
+</div>
+
+<script>
+// JavaScript code
+document.getElementById("parentSignUpBtn").addEventListener("click", function() {
+    document.getElementById("screen1").style.display = "none";
+    document.getElementById("parentSignUpForm").style.display = "block";
+});
+
+document.getElementById("schoolSignUpBtn").addEventListener("click", function() {
+    document.getElementById("screen1").style.display = "none";
+    document.getElementById("schoolSignUpForm").style.display = "block";
+});
+
+document.getElementById("selectSchoolBtn").addEventListener("click", function() {
+    document.getElementById("parentSignUpForm").style.display = "none";
+    document.getElementById("schoolList").style.display = "block";
+});
+
+document.getElementById("checkoutBtn").addEventListener("click", function() {
+    document.getElementById("schoolList").style.display = "none";
+    document.getElementById("applicationForm").style.display = "block";
+});
+
+document.getElementById("selectParametersBtn").addEventListener("click", function() {
+    // Handle school sign up parameters selection
+    // You will fill in this space
+});
+
+document.getElementById("submitApplicationBtn").addEventListener("click", function() {
+    // Handle submission of parent's application
+    // You will fill in this space
+});
+</script>
+</body>
+</html>
